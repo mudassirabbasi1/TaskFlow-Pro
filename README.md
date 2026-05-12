@@ -19,5 +19,3 @@ A high-performance, cinematic Todo application developed to demonstrate **CRUD o
 - **Toggle Logic:** Real-time status updates (Done/Undo) using database commits.
 - **Responsive Design:** Optimized for both desktop and mobile viewing.
 
----
-*Intern at Rhombix Technologies | Actively seeking Backend/Full-Stack opportunities.*
