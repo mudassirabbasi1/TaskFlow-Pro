@@ -1,35 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <title>TaskFlow Manager</title>
-</head>
-<body>
-    <div class="content">
-        <h1>TaskFlow Dashboard</h1>
-        
-        <table>
-            <tr>
-                <th>Task</th>
-                <th>Added</th>
-                <th>Actions</th>
-            </tr>
-            {% for task in tasks %}
-            <tr>
-                <td>{{ task.content }}</td>
-                <td>{{ task.date_created.strftime('%b %d') }}</td>
-                <td>
-                    <a href="/update/{{task.id}}" class="update-btn">Edit</a>
-                    <a href="/delete/{{task.id}}" class="delete-btn">Delete</a>
-                </td>
-            </tr>
-            {% endfor %}
-        </table>
+{% extends 'base.html' %}
 
-        <form action="/" method="POST" class="add-form">
-            <input type="text" name="content" placeholder="Enter new task...">
-            <button type="submit">Add Task</button>
-        </form>
+{% block title %}Dashboard | TaskFlow{% endblock %}
+
+{% block body %}
+    <h1>TaskFlow Dashboard</h1>
+    
+    <div class="task-list">
+        {% if tasks|length < 1 %}
+        <p style="color: var(--text-dim); text-align: center;">No tasks yet. Add one below!</p>
+        {% else %}
+            {% for task in tasks %}
+            <div class="task-item">
+                <div class="task-info">
+                    <span style="{{ 'text-decoration: line-through; opacity: 0.4;' if task.status == 1 }}">
+                        {{ task.content }}
+                    </span>
+                    <small style="display: block; font-size: 0.7rem; color: var(--text-dim);">
+                        {{ task.date_created.strftime('%b %d, %H:%M') }}
+                    </small>
+                </div>
+                <div class="action-links">
+                    <a href="/done/{{task.id}}" class="edit-link">{{ 'Undo' if task.status == 1 else 'Done' }}</a>
+                    <a href="/update/{{task.id}}" class="edit-link">Edit</a>
+                    <a href="/delete/{{task.id}}" class="delete-link">Delete</a>
+                </div>
+            </div>
+            {% endfor %}
+        {% endif %}
     </div>
-</body>
-</html>
+
+    <form action="/" method="POST" class="add-form">
+        <input type="text" name="content" id="content" placeholder="What needs to be done?" required autocomplete="off">
+        <button type="submit">Add Task</button>
+    </form>
+{% endblock %}

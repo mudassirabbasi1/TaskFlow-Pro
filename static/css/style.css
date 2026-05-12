@@ -1,90 +1,46 @@
-/* General Reset */
-body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #121212;
-    color: #e0e0e0;
+/* Footer & Branding Styles */
+.main-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    min-height: 100vh;
+    gap: 2rem;
 }
 
-.content {
-    width: 400px;
-    background: #1e1e1e;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-h1 {
+.portfolio-footer {
     text-align: center;
-    color: #bb86fc;
-    margin-bottom: 30px;
+    padding: 20px;
+    opacity: 0.6;
+    transition: opacity 0.3s;
 }
 
-/* Table Styling */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+.portfolio-footer:hover {
+    opacity: 1;
 }
 
-td {
-    padding: 12px 8px;
-    border-bottom: 1px solid #333;
-}
-
-td:nth-child(2) {
-    font-size: 0.8rem;
-    color: #888;
-    text-align: right;
-}
-
-a {
-    color: #cf6679;
-    text-decoration: none;
-    font-weight: bold;
+.portfolio-footer p {
+    margin: 5px 0;
     font-size: 0.9rem;
 }
 
-a:hover {
-    text-decoration: underline;
+.role-tag {
+    font-size: 0.75rem !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent);
 }
 
-/* Form Styling */
-form {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
+.social-links {
+    margin-top: 10px;
 }
 
-input[type="text"] {
-    flex: 1;
-    background: #2c2c2c;
-    border: 1px solid #444;
-    padding: 10px;
-    border-radius: 5px;
-    color: white;
-    outline: none;
+.social-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.8rem;
+    border-bottom: 1px solid transparent;
 }
 
-input[type="text"]:focus {
-    border-color: #bb86fc;
-}
-
-input[type="submit"] {
-    background: #bb86fc;
-    color: #000;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s ease;
-}
-
-input[type="submit"]:hover {
-    background: #9965f4;
+.social-links a:hover {
+    border-bottom: 1px solid var(--accent);
 }

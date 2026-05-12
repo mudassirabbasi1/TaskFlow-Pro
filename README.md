@@ -1,19 +1,23 @@
-# 🚀 Flask TaskFlow: A Full-Stack Todo Application
+# 🚀 TaskFlow Pro – Full-Stack Task Management
 
-A clean, responsive, and database-driven task management system built with **Python** and **Flask**. This project demonstrates full **CRUD** (Create, Read, Update, Delete) functionality and professional database integration.
+A high-performance, cinematic Todo application developed to demonstrate **CRUD operations** and **Data Persistence** in a professional Flask environment.
 
-## 🛠️ Features
-- **Data Persistence:** Uses SQLite and SQLAlchemy to save tasks across sessions.
-- **Modern UI:** Responsive dark-themed design built with custom CSS.
-- **Dynamic Content:** Server-side rendering using the Jinja2 templating engine.
-- **RESTful Routing:** Logical URL structures for adding and removing data.
+## 👨‍💻 Developer Profile
+- **Developer:** Mudassir Ahmed
+- **Role:** Full-Stack Web Developer
+- **Location:** Karachi, Pakistan
+- **Focus:** Backend Engineering (Python/Flask) & UI/UX Aesthetics
 
-## 💻 Tech Stack
-- **Backend:** Python 3, Flask
-- **Database:** SQLite (SQLAlchemy ORM)
-- **Frontend:** HTML5, CSS3, Jinja2
+## 🛠️ Technical Implementation
+- **Backend:** Python, Flask (RESTful Routing)
+- **Database:** SQLite with SQLAlchemy ORM for relational data management.
+- **Frontend:** Jinja2 Templating, HTML5, and custom CSS3 (Glassmorphism UI).
+- **Architecture:** Implemented Template Inheritance for a scalable codebase.
 
-## ⚙️ How to Run Locally
-1. **Clone the repo:**
-   ```bash
-   git clone [https://github.com/mudassirabbasi1/todo-flask-app.git](https://github.com/mudassirabbasi1/todo-flask-app.git)
+## 📌 Features
+- **Full CRUD:** Create, Read, Update, and Delete tasks.
+- **Toggle Logic:** Real-time status updates (Done/Undo) using database commits.
+- **Responsive Design:** Optimized for both desktop and mobile viewing.
+
+---
+*Intern at Rhombix Technologies | Actively seeking Backend/Full-Stack opportunities.*
