@@ -1,46 +1,82 @@
-/* Footer & Branding Styles */
-.main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+:root {
+    --bg-color: #0f172a;
+    --card-bg: rgba(30, 41, 59, 0.7);
+    --accent: #38bdf8;
+    --text-main: #f8fafc;
+    --text-dim: #94a3b8;
+    --danger: #f43f5e;
 }
 
-.portfolio-footer {
-    text-align: center;
-    padding: 20px;
-    opacity: 0.6;
-    transition: opacity 0.3s;
-}
-
-.portfolio-footer:hover {
-    opacity: 1;
-}
-
-.portfolio-footer p {
-    margin: 5px 0;
-    font-size: 0.9rem;
-}
-
-.role-tag {
-    font-size: 0.75rem !important;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--accent);
-}
-
-.social-links {
-    margin-top: 10px;
-}
-
-.social-links a {
+body {
+    background: radial-gradient(circle at top right, #1e293b, #0f172a);
     color: var(--text-main);
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 0.8rem;
-    border-bottom: 1px solid transparent;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    margin: 0;
+    min-height: 100vh;
 }
 
-.social-links a:hover {
-    border-bottom: 1px solid var(--accent);
+.main-container { width: 100%; max-width: 480px; display: flex; flex-direction: column; align-items: center; }
+
+.content {
+    width: 100%;
+    background: var(--card-bg);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2.5rem;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
 }
+
+h1 {
+    text-align: center;
+    background: linear-gradient(to right, #38bdf8, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.action-links a {
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.edit-link { color: var(--accent); }
+.delete-link { color: var(--danger); }
+
+.add-form { display: flex; gap: 10px; margin-top: 20px; }
+
+input[type="text"] {
+    flex: 1;
+    background: #020617;
+    border: 1px solid #1e293b;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    outline: none;
+}
+
+button {
+    background: var(--accent);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer { text-align: center; margin-top: 20px; opacity: 0.6; font-size: 0.8rem; color: var(--text-dim); }

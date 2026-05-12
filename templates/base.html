@@ -3,13 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}TaskFlow Pro{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <title>TaskFlow Pro | Mudassir Ahmed</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background: radial-gradient(circle at top right, #1e293b, #0f172a); min-height: 100vh; }
+        .glass { background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+    </style>
 </head>
-<body>
-    <div class="content">
-        {% block body %}{% endblock %}
+<body class="text-slate-200 font-sans antialiased">
+    <div class="flex flex-col items-center justify-center min-h-screen p-6">
+        
+        <div class="glass w-full max-w-lg rounded-[2.5rem] p-10 shadow-2xl">
+            {% block body %}{% endblock %}
+        </div>
+
+        <footer class="mt-12 text-center flex flex-col items-center gap-6">
+            <div class="glass px-8 py-5 rounded-3xl flex items-center gap-8 border border-white/10 shadow-xl">
+                <div class="text-left border-r border-slate-700 pr-8">
+                    <div class="flex items-center gap-2 mb-1">
+                        <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span></span>
+                        <p class="text-[10px] uppercase tracking-[0.2em] text-emerald-400 font-black">Available for Hire</p>
+                    </div>
+                    <p class="text-xl font-black text-white">Mudassir Ahmed</p>
+                    <p class="text-[11px] text-slate-400 font-medium tracking-wide">Developer | Karachi, PK</p>
+                </div>
+                <div class="flex gap-5">
+                    <a href="https://github.com/mudassirabbasi1" target="_blank" class="text-slate-400 hover:text-sky-400 transition-all text-2xl"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/mudassir-ahmed-2993a440a/" target="_blank" class="text-slate-400 hover:text-sky-400 transition-all text-2xl"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:abbasimudasir2098@gmail.com" class="text-slate-400 hover:text-sky-400 transition-all text-2xl"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            
+            <a href="mailto:abbasimudasir2098@gmail.com" class="bg-sky-600 hover:bg-sky-500 text-white px-10 py-3 rounded-full font-bold text-sm shadow-[0_0_25px_rgba(56,189,248,0.3)] transition-all active:scale-95">
+                <i class="fas fa-paper-plane mr-2"></i> GET IN TOUCH
+            </a>
+        </footer>
     </div>
 </body>
 </html>
